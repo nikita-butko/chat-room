@@ -10,9 +10,17 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
 import java.util.Locale;
 
+/**
+ * Internationalization configuration class.
+ */
 @Configuration
 public class I18nConfig implements WebMvcConfigurer {
 
+    /**
+     * Bean for message property file base name setting.
+     *
+     * @return the message source with "messages" as default base name
+     */
     @Bean
     public static MessageSource messageSource() {
         ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
@@ -20,6 +28,11 @@ public class I18nConfig implements WebMvcConfigurer {
         return messageSource;
     }
 
+    /**
+     * Bean for default locale setting.
+     *
+     * @return the locale resolver with English locale as default
+     */
     @Bean
     public LocaleResolver localeResolver() {
         SessionLocaleResolver localeResolver = new SessionLocaleResolver();

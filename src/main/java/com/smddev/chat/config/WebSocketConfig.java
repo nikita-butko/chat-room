@@ -7,39 +7,42 @@ import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBr
 import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
 
+/**
+ * Web socket configuration class
+ */
 @Configuration
 @EnableWebSocketMessageBroker
 public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Value("${websocket.config.endpoint}")
-    private String ENDPOINT;
+    private String endpoint;
     @Value("${websocket.config.applicationDestinationPrefixes}")
-    private String APPLICATION_DESTINATION_PREFIX;
+    private String applicationDestinationPrefix;
     @Value("${websocket.config.stompBrokerRelay}")
-    private String STOMP_BROKER_RELAY;
+    private String stompBrokerRelay;
     @Value("${websocket.config.relayHost}")
-    private String RELAY_HOST;
+    private String relayHost;
     @Value("${websocket.config.relayPort}")
-    private Integer RELAY_PORT;
+    private Integer relayPort;
     @Value("${websocket.config.clientLogin}")
-    private String LOGIN;
+    private String login;
     @Value("${websocket.config.clientPasscode}")
-    private String PASSWORD;
+    private String password;
 
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint(ENDPOINT).withSockJS();
+        registry.addEndpoint(endpoint).withSockJS();
     }
 
     @Override
     public void configureMessageBroker(MessageBrokerRegistry registry) {
-        registry.setApplicationDestinationPrefixes(APPLICATION_DESTINATION_PREFIX);
-        registry.enableStompBrokerRelay(STOMP_BROKER_RELAY)
-                .setRelayHost(RELAY_HOST)
-                .setRelayPort(RELAY_PORT)
-                .setClientLogin(LOGIN)
-                .setClientPasscode(PASSWORD);
+        registry.setApplicationDestinationPrefixes(applicationDestinationPrefix);
+        registry.enableStompBrokerRelay(stompBrokerRelay)
+                .setRelayHost(relayHost)
+                .setRelayPort(relayPort)
+                .setClientLogin(login)
+                .setClientPasscode(password);
     }
 
 }

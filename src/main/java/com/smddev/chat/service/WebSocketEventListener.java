@@ -13,6 +13,9 @@ import org.springframework.web.socket.messaging.SessionDisconnectEvent;
 import java.util.Map;
 import java.util.Optional;
 
+/**
+ * Web socket event listener
+ */
 @Service
 @Slf4j
 @AllArgsConstructor
@@ -20,11 +23,21 @@ public class WebSocketEventListener {
 
     private SimpMessageSendingOperations messagingTemplate;
 
+    /**
+     * New connection event listener
+     *
+     * @param event the connection event
+     */
     @EventListener
     public void handleConnect(SessionConnectedEvent event) {
         log.info("New connection");
     }
 
+    /**
+     * Disconnect event listener
+     *
+     * @param event the disconnection event
+     */
     @EventListener
     public void handleDisconnect(SessionDisconnectEvent event) {
         Map<String, Object> sessionAttributes = StompHeaderAccessor.wrap(event.getMessage()).getSessionAttributes();
