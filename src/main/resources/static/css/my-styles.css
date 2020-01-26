@@ -33,6 +33,33 @@
     box-shadow: 0 20px 40px rgba(0,0,0,.4);
 }
 
+.chat-messages-area {
+    height: 600px;
+    overflow-y: auto;
+    border: #b2b2b2 solid thin;
+    border-radius: 4px;
+}
+
+.chat-user-area {
+    height: 600px;
+    overflow-y: auto;
+}
+
+.user-connect {
+    color: green;
+    text-align: center;
+}
+
+.user-chat {
+    color: blue;
+    display: flex;
+}
+
+.user-disconnect {
+    color: red;
+    text-align: center;
+}
+
 .hidden {
     display: none;
 }
