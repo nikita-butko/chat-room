@@ -1,0 +1,38 @@
+.headerline {
+    background: #E20074;
+    margin: 0 0 24px 0;
+    height: 72px;
+}
+
+.background {
+    background-color: #F4F4F4
+}
+
+.logo {
+    padding-top: 15px;
+    color: white;
+    display: inline-block;
+}
+
+.welcome-form {
+    margin: 100px auto;
+    width: 400px;
+    border: #b2b2b2 solid thin;
+    padding: 50px 30px 30px 30px;
+    border-radius: 4px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.4);
+}
+
+.chat-form {
+    margin: 100px auto;
+    height: 800px;
+    width: 800px;
+    border: #b2b2b2 solid thin;
+    padding: 50px 30px 30px 30px;
+    border-radius: 4px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.4);
+}
+
+.hidden {
+    display: none;
+}
