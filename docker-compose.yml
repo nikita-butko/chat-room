@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  app-container:
+    build:
+      context: .
+    ports:
+      - 8080:8080
+    depends_on:
+      - rabbitmq-container
+
+  rabbitmq-container:
+    image: byteflair/rabbitmq-stomp
+    ports:
+      - 5672:5672
+      - 15672:15672
+      - 61613:61613
