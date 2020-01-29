@@ -8,7 +8,7 @@ body,html{
 
 .welcome-form {
     margin: 30% auto;
-    width: 400px;
+    width: 500px;
     padding: 50px 30px 30px 30px;
     box-shadow: 0 20px 40px rgba(0,0,0,.4);
     background-color: rgba(0,0,0,0.4);
@@ -155,4 +155,28 @@ body,html{
     .contacts_card{
         margin-bottom: 15px;
     }
+}
+.error-message{
+    color: red;
+}
+.greeting-message {
+    text-align: center;
+    margin-top: auto;
+    border-radius: 25px;
+    background-color: #78e08f;
+    padding: 10px;
+}
+
+.info-message {
+    padding-bottom: 15px;
+    max-width: 300px;
+    margin: auto;
+}
+
+.goodbye-message {
+    text-align: center;
+    margin-top: auto;
+    border-radius: 25px;
+    background-color: red;
+    padding: 10px;
 }
