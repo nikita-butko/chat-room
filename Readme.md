@@ -12,7 +12,7 @@
 **1. Clone the application**
 
 ```bash
-https://github.com/nikita-butko/chat-room.git
+git clone https://github.com/nikita-butko/chat-room.git
 ```
 
 **2. Go to the application folder**
