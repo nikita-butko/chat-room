@@ -8,7 +8,7 @@ document.getElementById('sendForm').addEventListener('submit', sendMessage, true
 function connect(event) {
     username = document.getElementById('usernameForm-input').value.trim();
     if(username) {
-        var boolean = $.ajax({
+        $.ajax({
             url : '/users/add',
             type: 'POST',
             dataType: 'json',
@@ -20,7 +20,7 @@ function connect(event) {
                 chatForm.classList.remove('hidden');
                 var socket = new SockJS('/chat-room-websocket');
                 stompClient = Stomp.over(socket);
-                stompClient.connect({}, onSuccess, onError);
+                stompClient.connect({}, onSuccess);
             },
             error: function(data) {
                 document.getElementById('errorMessage').removeChild(document.getElementById('errorText'));
@@ -38,10 +38,6 @@ function connect(event) {
 function onSuccess() {
     stompClient.subscribe('/topic/public', onMessageReceived);
     stompClient.send("/chat/connect", {}, JSON.stringify({sender: username, messageType: messageTypes[0]}) );
-}
-
-function onError() {
-    //TODO
 }
 
 function onMessageReceived(payload) {
