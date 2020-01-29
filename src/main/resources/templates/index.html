@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title> Chat room </title>
+    <title th:text="#{title.name}"> </title>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/my-styles.css"/>
     <link rel="stylesheet" href="css/my-styles.css"/>
@@ -16,10 +16,10 @@
             <form id="usernameForm-form">
                 <div class="form-group">
                     <h6 id="errorMessage" class="error-message"> <span id="errorText"> </span> </h6>
-                    <input id="usernameForm-input" name="username" type="text" class="form-control type_msg" placeholder="Enter your name" autofocus="true"/>
+                    <input id="usernameForm-input" name="username" type="text" class="form-control type_msg" th:attr="placeholder=#{start.username.placeholder}" autofocus="true"/>
                 </div>
                 <div class="form-group">
-                    <button id="usernameForm-button" type="submit" class="button"> Start chatting! </button>
+                    <button id="usernameForm-button" type="submit" class="button" th:text="#{start.button}"> </button>
                 </div>
             </form>
         </div>
@@ -50,7 +50,7 @@
                     <div class="card-footer">
                         <div class="input-group">
                             <form id="sendForm" class="send-form">
-                                <input id="sendForm-input" type="text" placeholder="Type your message..." autocomplete="off" class="form-control type_msg" />
+                                <input id="sendForm-input" type="text" th:attr="placeholder=#{chatForm.input.placeholder}" autocomplete="off" class="form-control type_msg" />
                             </form>
                         </div>
                     </div>

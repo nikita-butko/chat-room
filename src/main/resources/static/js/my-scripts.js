@@ -86,6 +86,7 @@ function onMessageReceived(payload) {
                         document.getElementById('contacts').appendChild(newContact);
                     }
                 }
+                document.getElementById('contacts').scrollTop = document.getElementById('contacts').scrollHeight;
             }
         });
 
@@ -164,6 +165,7 @@ function onMessageReceived(payload) {
         document.getElementById('messages').appendChild(newMessage);
 
     }
+    document.getElementById('messages').scrollTop = document.getElementById('messages').scrollHeight;
 }
 
 function sendMessage(event) {
