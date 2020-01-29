@@ -43,4 +43,4 @@ docker-compose up
 
 ![App Screenshot](chatting.png)
 
-**8. For management RabbitMQ use http://localhost:15672/ with login - guest, and password - guest)**
+**8. For management RabbitMQ use http://localhost:15672/ with login - guest, and password - guest**
