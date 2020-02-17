@@ -1,4 +1,4 @@
-package com.smddev.chat.model;
+package com.project.chat.model;
 
 import lombok.Data;
 

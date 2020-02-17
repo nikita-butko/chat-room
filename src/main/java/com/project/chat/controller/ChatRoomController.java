@@ -1,6 +1,6 @@
-package com.smddev.chat.controller;
+package com.project.chat.controller;
 
-import com.smddev.chat.model.Message;
+import com.project.chat.model.Message;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;

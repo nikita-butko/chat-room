@@ -1,4 +1,4 @@
-package com.smddev.chat.config;
+package com.project.chat.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;

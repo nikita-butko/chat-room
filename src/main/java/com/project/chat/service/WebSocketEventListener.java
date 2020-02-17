@@ -1,6 +1,6 @@
-package com.smddev.chat.service;
+package com.project.chat.service;
 
-import com.smddev.chat.model.Message;
+import com.project.chat.model.Message;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;

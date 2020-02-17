@@ -1,4 +1,4 @@
-package com.smddev.chat.controller;
+package com.project.chat.controller;
 
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
